@@ -1,0 +1,42 @@
+{
+  "name": "comely-launcher",
+  "productName": "ComelyLauncher",
+  "version": "1.1.0",
+  "repository": "github:xxxxwero/ComelyLauncher",
+  "license": "GPL-3.0-only",
+  "description": "ComelyLauncher — Minecraft Java Edition launcher for Windows",
+  "author": "ComelyLauncher",
+  "private": true,
+  "main": "dist/electron/main/index.js",
+  "scripts": {
+    "postinstall": "node node_modules/electron/install.js",
+    "prepare-assets": "node scripts/prepare-assets.mjs",
+    "dev": "npm run prepare-assets && node scripts/dev.mjs",
+    "typecheck": "tsc -p tsconfig.main.json --noEmit && tsc -p tsconfig.renderer.json --noEmit",
+    "build:main": "node -e \"require('fs').rmSync('dist/electron',{recursive:true,force:true})\" && tsc -p tsconfig.main.json",
+    "build:renderer": "vite build",
+    "build": "npm run prepare-assets && npm run typecheck && npm run build:main && npm run build:renderer",
+    "start": "electron .",
+    "dist": "npm run build && electron-builder --win zip --x64 && node scripts/package-exe.mjs"
+  },
+  "dependencies": {
+    "adm-zip": "^0.6.1"
+  },
+  "devDependencies": {
+    "@fontsource/inter": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "@fontsource/unbounded": "^5.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "skinview3d": "^3.4.2",
+    "@types/adm-zip": "^0.5.8",
+    "@types/node": "^26.6.6",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^6.2.0",
+    "electron": "^45.2.1",
+    "electron-builder": "^26.18.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  }
+}

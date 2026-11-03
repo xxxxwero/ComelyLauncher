@@ -1,0 +1,70 @@
+:root {
+  --accent-rgb: 242, 92, 5;
+  --accent-vivid-rgb: 255, 106, 19;
+  --accent-bright-rgb: 255, 122, 38;
+  --accent-soft-rgb: 255, 138, 61;
+  --accent-light-rgb: 255, 178, 122;
+  --accent-pale-rgb: 255, 217, 191;
+  --accent-shade-rgb: 120, 40, 0;
+  --ink-rgb: 20, 14, 10;
+  --bg-rgb: 26, 18, 13;
+  --bg-deep-rgb: 18, 12, 9;
+  --dialog-rgb: 30, 21, 16;
+  --menu-rgb: 36, 25, 19;
+
+  --accent: rgb(var(--accent-rgb));
+  --accent-bright: rgb(var(--accent-bright-rgb));
+  --accent-soft: rgb(var(--accent-soft-rgb));
+  --accent-light: rgb(var(--accent-light-rgb));
+  --accent-pale: rgb(var(--accent-pale-rgb));
+  --accent-tint: rgba(var(--accent-vivid-rgb), 0.18);
+  --accent-tint-strong: rgba(var(--accent-vivid-rgb), 0.26);
+  --accent-ring: rgba(var(--accent-soft-rgb), 0.45);
+  --accent-glow: rgba(var(--accent-rgb), 0.45);
+
+  --bg: rgb(var(--bg-rgb));
+  --bg-deep: rgb(var(--bg-deep-rgb));
+  --surface: rgba(var(--ink-rgb), 0.76);
+  --surface-strong: rgba(var(--ink-rgb), 0.88);
+  --surface-dialog: rgb(var(--dialog-rgb));
+  --surface-menu: rgb(var(--menu-rgb));
+  --surface-sidebar: rgba(var(--ink-rgb), 0.88);
+  --fill-1: rgba(255, 255, 255, 0.04);
+  --fill-2: rgba(255, 255, 255, 0.07);
+  --fill-3: rgba(255, 255, 255, 0.1);
+  --fill-4: rgba(255, 255, 255, 0.14);
+  --line: rgba(255, 255, 255, 0.1);
+  --line-soft: rgba(255, 255, 255, 0.06);
+  --line-strong: rgba(255, 255, 255, 0.14);
+
+  --text: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.72);
+  --text-subtle: rgba(255, 255, 255, 0.6);
+  --text-faint: rgba(255, 255, 255, 0.45);
+  --text-dark: rgb(var(--bg-rgb));
+  --danger: #ff8a80;
+  --danger-text: #ffb0a8;
+  --danger-tint: rgba(255, 138, 128, 0.14);
+  --success: #8be28b;
+
+  --font-display: 'Unbounded', 'Segoe UI', sans-serif;
+  --font-text: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Cascadia Mono', Consolas, monospace;
+
+  --radius-s: 9px;
+  --radius-m: 12px;
+  --radius-l: 14px;
+  --radius-xl: 18px;
+  --radius-xxl: 22px;
+
+  --shadow-dialog: inset 0 0 0 1px rgba(255, 255, 255, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 30px 80px rgba(0, 0, 0, 0.55), 0 0 60px rgba(var(--accent-rgb), 0.08);
+  --shadow-accent: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 8px 22px rgba(var(--accent-rgb), 0.4);
+  --shadow-accent-hover: inset 0 1px 0 rgba(255, 255, 255, 0.36), 0 10px 30px rgba(var(--accent-bright-rgb), 0.62);
+  --shadow-panel: inset 0 0 0 1px rgba(255, 255, 255, 0.09), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 18px 44px rgba(0, 0, 0, 0.3);
+  --gradient-accent: linear-gradient(180deg, rgb(var(--accent-bright-rgb)) 0%, var(--accent) 100%);
+  --glass-sheen: radial-gradient(120% 90% at 0% 0%, rgba(var(--accent-soft-rgb), 0.1) 0%, rgba(var(--accent-soft-rgb), 0) 55%), linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 110px);
+
+  --ease-spring: cubic-bezier(0.2, 0.8, 0.3, 1.3);
+  --ease-out: cubic-bezier(0.2, 0.8, 0.3, 1);
+  --sidebar-width: 232px;
+}

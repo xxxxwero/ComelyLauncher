@@ -1,0 +1,273 @@
+.notice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: var(--radius-m);
+  font-size: 13.5px;
+  color: var(--danger-text);
+  background: var(--danger-tint);
+  box-shadow: inset 0 0 0 1px rgba(255, 138, 128, 0.35);
+}
+
+.body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  gap: 16px;
+}
+
+.list {
+  width: 320px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+  min-height: 0;
+}
+
+.detail {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.filters {
+  display: flex;
+  gap: 4px;
+}
+
+.filter {
+  flex: 1;
+  height: 34px;
+  border: 0;
+  border-radius: var(--radius-s);
+  color: var(--text-muted);
+  background: transparent;
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+.filter:hover {
+  color: var(--text);
+}
+
+.filterActive {
+  color: var(--text);
+  background: var(--accent-tint-strong);
+  box-shadow: inset 0 0 0 1px var(--accent-ring);
+}
+
+.tickets {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow-y: auto;
+}
+
+.ticket {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-shrink: 0;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: var(--radius-m);
+  color: var(--text);
+  text-align: left;
+  background: var(--fill-1);
+  box-shadow: inset 0 0 0 1px var(--line-soft);
+  transition: background-color 0.15s ease;
+}
+
+.ticket:hover {
+  background: var(--fill-3);
+}
+
+.ticketActive {
+  background: var(--accent-tint);
+  box-shadow: inset 0 0 0 1px var(--accent-ring);
+}
+
+.ticketTop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ticketSubject {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ticketMeta {
+  overflow: hidden;
+  font-size: 12px;
+  color: var(--text-subtle);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.unreadDot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--accent-soft);
+}
+
+.emptyList,
+.placeholder {
+  padding: 24px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.placeholder {
+  margin: auto;
+}
+
+.thread {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.threadHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.threadTitles {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.threadTitle {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.threadChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.threadActions {
+  display: flex;
+  flex-shrink: 0;
+  gap: 6px;
+}
+
+.meta {
+  padding: 8px 10px;
+  border-radius: var(--radius-s);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--text-subtle);
+  background: var(--fill-1);
+  overflow-wrap: anywhere;
+}
+
+.messages {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.message {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 82%;
+  padding: 10px 12px;
+  border-radius: var(--radius-m);
+  background: var(--fill-2);
+}
+
+.messageAdmin {
+  align-self: flex-end;
+  background: var(--accent-tint);
+  box-shadow: inset 0 0 0 1px var(--accent-ring);
+}
+
+.messageAuthor {
+  font-size: 11.5px;
+  color: var(--text-subtle);
+}
+
+.messageText {
+  font-size: 14px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.composer {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: var(--radius-m);
+  outline: none;
+  resize: none;
+  color: var(--text);
+  font-family: var(--font-text);
+  font-size: 14px;
+  line-height: 1.45;
+  background: var(--fill-2);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.textarea:focus {
+  box-shadow: inset 0 0 0 1.5px var(--accent-ring);
+}
+
+.log {
+  max-height: 60vh;
+  margin: 0;
+  padding: 12px;
+  overflow: auto;
+  border-radius: var(--radius-m);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--text-muted);
+  background: var(--bg-deep);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}

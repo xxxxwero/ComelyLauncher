@@ -1,0 +1,26 @@
+appId: com.comelylauncher.app
+productName: ComelyLauncher
+copyright: Copyright © 2026 ComelyLauncher
+directories:
+  output: release
+  buildResources: assets/icons
+files:
+  - dist/**/*
+  - package.json
+electronLanguages:
+  - ru
+  - en-US
+extraResources:
+  - from: assets/icons
+    to: icons
+    filter:
+      - comelylauncher.ico
+      - comelylauncher-icon-256.png
+win:
+  icon: assets/icons/comelylauncher.ico
+  target:
+    - target: zip
+      arch:
+        - x64
+  artifactName: app-payload.${ext}
+  requestedExecutionLevel: asInvoker

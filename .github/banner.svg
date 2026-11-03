@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 340" width="1280" height="340" role="img" aria-label="ComelyLauncher">
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1d120b"/>
+      <stop offset="1" stop-color="#0d0a09"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="46%" r="52%">
+      <stop offset="0" stop-color="#ff6a13" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#ff6a13" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="word" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff7a26"/>
+      <stop offset="1" stop-color="#f25c05"/>
+    </linearGradient>
+    <clipPath id="frame">
+      <rect width="1280" height="340" rx="22"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="1280" height="340" fill="url(#base)"/>
+    <rect width="1280" height="340" fill="url(#glow)"/>
+    <g fill="#ff7a26">
+      <rect x="64" y="60" width="26" height="26" opacity="0.28"/>
+      <rect x="96" y="92" width="26" height="26" opacity="0.14"/>
+      <rect x="64" y="124" width="26" height="26" opacity="0.08"/>
+      <rect x="150" y="38" width="16" height="16" opacity="0.18"/>
+      <rect x="200" y="238" width="22" height="22" opacity="0.14"/>
+      <rect x="112" y="262" width="34" height="34" opacity="0.2"/>
+      <rect x="152" y="284" width="16" height="16" opacity="0.1"/>
+      <rect x="1190" y="46" width="34" height="34" opacity="0.2"/>
+      <rect x="1152" y="86" width="20" height="20" opacity="0.12"/>
+      <rect x="1098" y="44" width="14" height="14" opacity="0.16"/>
+      <rect x="1176" y="238" width="26" height="26" opacity="0.26"/>
+      <rect x="1208" y="270" width="26" height="26" opacity="0.12"/>
+      <rect x="1090" y="274" width="16" height="16" opacity="0.1"/>
+    </g>
+    <text x="640" y="170" text-anchor="middle" font-family="'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="92" font-weight="800" letter-spacing="-2" fill="#ffffff">Comely<tspan fill="url(#word)">Launcher</tspan></text>
+    <text x="640" y="228" text-anchor="middle" font-family="'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="30" fill="#d9cec7">Лаунчер Minecraft: Java Edition для Windows</text>
+  </g>
+</svg>

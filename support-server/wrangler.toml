@@ -1,0 +1,14 @@
+name = "comely-support"
+main = "src/index.ts"
+compatibility_date = "2026-10-01"
+
+[vars]
+ADMIN_UUID = "462dc66f1b354b0a8082247fab5619b5"
+
+[triggers]
+crons = ["0 3 * * *"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "comely-support"
+database_id = "779c1805-6495-419e-b7bb-62fc1ed68234"

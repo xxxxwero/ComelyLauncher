@@ -1,0 +1,177 @@
+.loaders {
+  display: grid;
+  gap: 6px;
+}
+
+.loaderButton {
+  height: 44px;
+  border: 0;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+  font-size: 13.5px;
+}
+
+.loaderActive {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.covers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.coverButton {
+  width: 46px;
+  height: 46px;
+  padding: 2px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15);
+  opacity: 0.7;
+  transition: opacity 0.15s ease, box-shadow 0.15s ease, transform 0.15s var(--ease-spring);
+}
+
+.coverButton:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.coverActive {
+  opacity: 1;
+  box-shadow: 0 0 0 2px var(--accent-bright);
+}
+
+.coverButton img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.loaderStatus {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 22px;
+  font-size: 12.5px;
+  color: var(--text-subtle);
+}
+
+.loaderWarning {
+  color: var(--danger-text);
+}
+
+.optionCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 14px;
+  border: 0;
+  border-radius: var(--radius-l);
+  color: var(--text);
+  text-align: left;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.optionDashed {
+  padding: 18px;
+  background: rgba(var(--accent-vivid-rgb), 0.08);
+  box-shadow: none;
+  border: 2px dashed rgba(var(--accent-soft-rgb), 0.55);
+}
+
+.optionIcon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: var(--radius-m);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(var(--accent-vivid-rgb), 0.2);
+  color: var(--accent-soft);
+}
+
+.optionIconSolid {
+  background: var(--accent);
+  color: #fff;
+}
+
+.optionText {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+
+.optionTitle {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.optionHint {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.68);
+  line-height: 1.4;
+}
+
+.row {
+  display: flex;
+  gap: 14px;
+  align-items: flex-end;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.profiles {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profilesTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.profileList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 212px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.profileRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px;
+  border-radius: var(--radius-m);
+  background: var(--fill-1);
+  box-shadow: inset 0 0 0 1px var(--line-soft);
+}
+
+.profileName {
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

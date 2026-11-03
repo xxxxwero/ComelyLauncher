@@ -1,0 +1,93 @@
+.stage {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  border-radius: var(--radius-l);
+  overflow: hidden;
+  touch-action: none;
+  user-select: none;
+  background: radial-gradient(circle at 50% 55%, rgba(var(--accent-bright-rgb), 0.45) 0%, rgba(var(--accent-bright-rgb), 0.08) 45%, rgba(255, 255, 255, 0.03) 70%);
+}
+
+.shadow {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  width: 170px;
+  height: 24px;
+  margin-left: -85px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.35);
+  filter: blur(8px);
+}
+
+.spriteWindow {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  overflow: hidden;
+}
+
+.canvasWrap {
+  position: absolute;
+  inset: 0;
+}
+
+.hint {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(var(--ink-rgb), 0.55);
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+}
+
+.capeChip {
+  position: absolute;
+  left: 12px;
+  top: 46px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(var(--accent-vivid-rgb), 0.25);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent-pale);
+  pointer-events: none;
+}
+
+.controls {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.control {
+  background: rgba(var(--ink-rgb), 0.6) !important;
+  color: #fff !important;
+}
+
+.controlActive {
+  background: var(--accent) !important;
+}
+
+.placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

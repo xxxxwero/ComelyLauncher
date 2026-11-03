@@ -1,0 +1,53 @@
+.popover {
+  position: fixed;
+  z-index: 80;
+  min-width: 220px;
+  padding: 6px;
+  border-radius: var(--radius-m);
+  background: var(--surface-menu);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12), 0 18px 40px rgba(0, 0, 0, 0.55);
+  animation: cl-pop 0.16s ease-out both;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 38px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  font-size: 13.5px;
+  font-weight: 600;
+  text-align: left;
+  transition: background-color 0.15s ease;
+}
+
+.item:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.itemActive {
+  background: rgba(var(--accent-vivid-rgb), 0.16);
+}
+
+.danger {
+  color: var(--danger-text);
+}
+
+.separator {
+  height: 1px;
+  margin: 4px 6px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.heading {
+  display: block;
+  padding: 6px 12px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-subtle);
+}

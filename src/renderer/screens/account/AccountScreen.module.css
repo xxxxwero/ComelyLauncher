@@ -1,0 +1,228 @@
+.body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.preview {
+  width: 360px;
+  flex-shrink: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nameRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.name {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.details {
+  flex: 1;
+  min-width: 0;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.loginType {
+  height: 46px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  border-radius: var(--radius-m);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.loginDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+}
+
+.loginHint {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.uuid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 8px 8px 14px;
+  border-radius: var(--radius-m);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 14px;
+}
+
+.uuidValue {
+  font-weight: 600;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  user-select: text;
+}
+
+.saved {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-height: 0;
+}
+
+.savedList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.accountRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: var(--radius-m);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  transition: background-color 0.18s ease, box-shadow 0.18s ease;
+  animation: cl-rise 0.3s var(--ease-out) both;
+}
+
+.accountRowActive {
+  background: rgba(var(--accent-vivid-rgb), 0.16);
+  box-shadow: inset 0 0 0 1.5px var(--accent-bright);
+}
+
+.accountText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.accountName {
+  font-size: 15px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.accountType {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.kind {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 64px;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: var(--radius-l);
+  color: var(--text);
+  text-align: left;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.kindActive {
+  background: rgba(var(--accent-vivid-rgb), 0.16);
+  box-shadow: inset 0 0 0 1.5px var(--accent-bright);
+}
+
+.kindText {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+
+.kindTitle {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.kindDesc {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: cl-pop 0.2s ease-out both;
+}
+
+.avatars {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.avatarTile {
+  height: 150px;
+  padding: 8px;
+  border: 0;
+  border-radius: var(--radius-l);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.avatarTileActive {
+  background: rgba(var(--accent-vivid-rgb), 0.16);
+  box-shadow: inset 0 0 0 1.5px var(--accent-bright);
+}
+
+.avatarTile img {
+  height: 130px;
+  object-fit: contain;
+}
