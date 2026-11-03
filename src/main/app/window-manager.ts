@@ -18,6 +18,7 @@ export class WindowManager implements GameWindowHooks {
   private releaseTimer: NodeJS.Timeout | null = null;
   private releasedBounds: Rectangle | null = null;
   private releasedMaximized = false;
+  private readonly visibilityListeners = new Set<() => void>();
 
   constructor(
     private readonly settings: SettingsService,
@@ -30,6 +31,14 @@ export class WindowManager implements GameWindowHooks {
 
   get current(): BrowserWindow | null {
     return this.window && !this.window.isDestroyed() ? this.window : null;
+  }
+
+  isVisible(): boolean {
+    return Boolean(this.current?.isVisible());
+  }
+
+  onVisibilityChange(listener: () => void): void {
+    this.visibilityListeners.add(listener);
   }
 
   create(): BrowserWindow {
@@ -53,6 +62,8 @@ export class WindowManager implements GameWindowHooks {
     });
     this.window = window;
     this.events.attach(window);
+    window.on('show', () => this.notifyVisibility());
+    window.on('hide', () => this.notifyVisibility());
     window.on('maximize', () => this.emitState());
     window.on('unmaximize', () => this.emitState());
     window.on('close', (event) => {
@@ -162,6 +173,10 @@ export class WindowManager implements GameWindowHooks {
   private cancelRelease(): void {
     if (this.releaseTimer) clearTimeout(this.releaseTimer);
     this.releaseTimer = null;
+  }
+
+  private notifyVisibility(): void {
+    for (const listener of this.visibilityListeners) listener();
   }
 
   private emitState(): void {

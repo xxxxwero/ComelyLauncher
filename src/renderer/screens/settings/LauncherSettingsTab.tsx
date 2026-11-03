@@ -115,6 +115,7 @@ export function LauncherSettingsTab() {
         <ToggleRow label={t('settings.hideOnLaunch')} checked={launcher.hideOnLaunch} onChange={(hideOnLaunch) => save({ launcher: { hideOnLaunch } })} />
         <ToggleRow label={t('settings.tray')} checked={launcher.minimizeToTray} onChange={(minimizeToTray) => save({ launcher: { minimizeToTray } })} />
         <ToggleRow label={t('settings.console')} checked={launcher.showGameConsole} onChange={(showGameConsole) => save({ launcher: { showGameConsole } })} />
+        <ToggleRow label={t('settings.discordPresence')} checked={launcher.discordPresence} onChange={(discordPresence) => save({ launcher: { discordPresence } })} />
       </div>
       {pendingDirectory && <GameDirectoryDialog directory={pendingDirectory} onClose={() => setPendingDirectory(null)} />}
     </div>

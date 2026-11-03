@@ -23,6 +23,7 @@ if (!app.requestSingleInstanceLock()) {
       registerIpc(services);
       services.windows.create();
       services.updates.start();
+      services.presence.start();
       app.on('second-instance', () => services.windows.show());
       app.on('before-quit', () => services.windows.quit());
       log.info(`ComelyLauncher ${app.getVersion()} started`);

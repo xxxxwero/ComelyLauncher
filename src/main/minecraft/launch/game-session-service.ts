@@ -42,6 +42,7 @@ export class GameSessionService {
   private preparation: AbortController | null = null;
   private forceStopTimer: NodeJS.Timeout | null = null;
   private readonly logs: GameLogBuffer;
+  private readonly listeners = new Set<() => void>();
 
   constructor(
     private readonly settings: SettingsService,
@@ -54,6 +55,10 @@ export class GameSessionService {
     private readonly hooks: GameWindowHooks
   ) {
     this.logs = new GameLogBuffer(events);
+  }
+
+  onChange(listener: () => void): void {
+    this.listeners.add(listener);
   }
 
   current(): GameSession | null {
@@ -337,5 +342,6 @@ export class GameSessionService {
 
   private emit(): void {
     this.events.emit('game:session', this.current());
+    for (const listener of this.listeners) listener();
   }
 }

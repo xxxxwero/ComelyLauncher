@@ -564,6 +564,7 @@ export const ru = {
     hideOnLaunch: 'Скрывать лаунчер во время игры',
     tray: 'Сворачивать в трей вместо закрытия',
     console: 'Сразу открывать консоль игры при запуске',
+    discordPresence: 'Показывать активность в Discord',
     aboutTitle: 'ComelyLauncher {version}',
     aboutHint: 'Настройки и аккаунты хранятся только на этом компьютере',
     autosave: 'Изменения сохраняются автоматически',

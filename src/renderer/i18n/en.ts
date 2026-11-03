@@ -566,6 +566,7 @@ export const en: Dictionary = {
     hideOnLaunch: 'Hide the launcher while playing',
     tray: 'Minimize to tray instead of closing',
     console: 'Open the game console on launch',
+    discordPresence: 'Show activity in Discord',
     aboutTitle: 'ComelyLauncher {version}',
     aboutHint: 'Settings and accounts are stored only on this computer',
     autosave: 'Changes are saved automatically',

@@ -21,6 +21,7 @@ import { SettingsService } from '../settings/settings-service';
 import { SkinService } from '../skins/skin-service';
 import { SupportService } from '../support/support-service';
 import { TaskManager } from '../tasks/task-manager';
+import { PresenceService } from '../discord/presence-service';
 import { UpdateService } from '../updates/update-service';
 import { WorldService } from '../worlds/world-service';
 import { WindowManager } from './window-manager';
@@ -42,6 +43,7 @@ export interface LauncherServices {
   news: NewsService;
   support: SupportService;
   updates: UpdateService;
+  presence: PresenceService;
   accounts: AccountService;
   skins: SkinService;
   installedContent: InstalledContentService;
@@ -81,5 +83,6 @@ export async function createServices(): Promise<LauncherServices> {
   const support = new SupportService(accounts, settings, instances, sessions);
   const news = new NewsService(support);
   const updates = new UpdateService(tasks, events, sessions, windows);
-  return { events, settings, backgrounds, windows, tasks, versions, loaders, java, instances, gameDirectoryMover, instanceCopier, mrpackExporter, worlds, news, support, updates, accounts, skins, installedContent, content, sessions, screenshots };
+  const presence = new PresenceService(settings, instances, sessions, windows);
+  return { events, settings, backgrounds, windows, tasks, versions, loaders, java, instances, gameDirectoryMover, instanceCopier, mrpackExporter, worlds, news, support, updates, presence, accounts, skins, installedContent, content, sessions, screenshots };
 }

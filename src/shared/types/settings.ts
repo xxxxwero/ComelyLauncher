@@ -47,6 +47,7 @@ export interface LauncherBehaviorSettings {
   hideOnLaunch: boolean;
   minimizeToTray: boolean;
   showGameConsole: boolean;
+  discordPresence: boolean;
 }
 
 export interface LauncherSettings {

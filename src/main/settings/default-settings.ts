@@ -50,7 +50,8 @@ export function createDefaultSettings(): LauncherSettings {
       gameDirectory: defaultGameDirectory(),
       hideOnLaunch: false,
       minimizeToTray: true,
-      showGameConsole: false
+      showGameConsole: false,
+      discordPresence: true
     },
     selectedInstanceId: null
   };
